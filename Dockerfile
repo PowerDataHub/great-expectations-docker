@@ -26,7 +26,7 @@ RUN apk --update --no-cache add --virtual .builddeps \
       py3-pip \
       build-base \
   && pip install --upgrade pip \
-  && pip install --no-cache-dir -r requirements.txt --install-option="--jobs=$(nproc)" \
+  && pip install --no-cache-dir -r requirements.txt \
   && apk del --purge .builddeps \
   && rm -rf /tmp/* \
         /usr/includes/* \
@@ -36,7 +36,5 @@ RUN apk --update --no-cache add --virtual .builddeps \
         /var/tmp/* \
         /root/.cache
 
-  
-  
 # Run dbt
 CMD ["great_expectations"]
