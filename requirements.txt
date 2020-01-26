@@ -1,0 +1,6 @@
+pytz
+cython
+numpy
+pandas
+matplotlib
+great_expectations==0.8.7
