@@ -13,7 +13,11 @@ LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
 
 ADD ./requirements.txt ./
 
-RUN pip install --upgrade pip \
+RUN apt-get update -yqq \
+  && apt-get install --no-install-recommends -yqq ca-certificates \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache \
+  && pip install --upgrade pip \
   && pip install --no-cache-dir -r requirements.txt  
 
 # Run great_expectations
