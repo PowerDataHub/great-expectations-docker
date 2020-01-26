@@ -1,3 +1,4 @@
+wheels
 pytz
 cython
 numpy
