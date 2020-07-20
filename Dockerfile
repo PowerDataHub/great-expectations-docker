@@ -4,7 +4,7 @@ ARG BUILD_DATE
 ARG VCS_REF                                                                                                                                                          
                                                                                                                                                                      
 LABEL maintainer="Eduardo Bizarro <edbizarro@gmail.com>" \
-  org.label-schema.name="edbizarro/gitlab-ci-pipeline-php" \
+  org.label-schema.name="PowerDataHub/great-expectations-docker" \
   org.label-schema.description=":whale2: Docker image for great_expectations (https://greatexpectations.io)." \
   org.label-schema.build-date=$BUILD_DATE \
   org.label-schema.schema-version="1.0" \ 
